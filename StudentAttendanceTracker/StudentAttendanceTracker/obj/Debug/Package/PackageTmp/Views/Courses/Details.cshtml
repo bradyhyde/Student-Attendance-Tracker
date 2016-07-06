@@ -1,0 +1,74 @@
+﻿@model StudentAttendanceTracker.Models.CourseViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-offset-1 col-md-4">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.CourseName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CourseName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Location)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Location)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Instructor)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Instructor)
+                </dd>
+            </dl>
+        </div>
+        <div class="col-md-offset-1 col-md-4" >
+            <table class="table table-bordered">
+                <tr>
+                    <th class="text-center" colspan="2">
+                        @Html.DisplayNameFor(model => model.Students)
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Students[0].FirstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Students[0].LastName)
+                    </th>
+                </tr>
+                @foreach (var item in Model.Students)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.CourseID }) |
+            @Html.ActionLink("Add Student", "AddStudents", new { id = Model.CourseID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>

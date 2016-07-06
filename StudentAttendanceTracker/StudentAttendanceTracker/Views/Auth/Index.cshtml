@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Administrator Home</h2>
+
+<ul>
+    <li>@Html.ActionLink("Create a New User", "Register", "Auth")</li>
+    <li>@Html.ActionLink("See All Roles", "ListRoles", "Auth")</li>
+    <li>@Html.ActionLink("Create a New Role", "CreateRole", "Auth")</li>
+    <li>@Html.ActionLink("Manage User Roles", "ManageUserRoles", "Auth")</li>
+</ul>
+

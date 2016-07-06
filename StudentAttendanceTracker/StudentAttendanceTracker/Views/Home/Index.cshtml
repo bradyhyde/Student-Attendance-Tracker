@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <img height="500" width="525" class="img-responsive img-rounded" src="~/Content/Images/hamlin.JPG" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-1 col-md-3">
+            <h2>Attendance</h2>
+            <img src="~/Content/Images/1458165304_calendar.png" />
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+            <h2><a href="@Url.Action("Index", "Courses")">Courses</a></h2>
+            <a href="@Url.Action("Index", "Courses")"><img src="~/Content/Images/1458165322_news.png" /></a>
+
+        </div>
+        <div class="col-md-offset-1 col-md-3">
+            <h2><a href="@Url.Action("Index", "Students")">Students</a></h2>
+            <a href="@Url.Action("Index", "Students")"><img src="~/Content/Images/1458165342_user.png" /></a>
+        </div>
+    </div>
+</div>
+
+
+

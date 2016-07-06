@@ -1,0 +1,63 @@
+﻿@model StudentAttendanceTracker.Models.StudentViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+	<hr />
+    <div class="row">
+        <div class="col-md-offset-1 col-md-4">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.StudentNumber)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.StudentNumber)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+            </dl>
+        </div>
+        <div class="col-md-offset-1 col-md-4">
+            <table class="table table-bordered">
+                <tr>
+                    <th class="text-center">
+                        @Html.DisplayNameFor(model => model.StudentCourses)
+                    </th>
+                </tr>
+                @foreach (var item in Model.StudentCourses)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CourseName)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="mapstudentmanager" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^\\\\psf\\Home\\Desktop\\Winter\ 16\\CS\ 296N\\StudentAttendanceTracker\\StudentAttendanceTracker\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^\\\\psf\\Home\\Desktop\\Winter\ 16\\CS\ 296N\\StudentAttendanceTracker\\StudentAttendanceTracker\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="StudentAttendanceTrackerContext-Web.config Connection String" description="" value="Data Source=tcp:mapstudentmanager.database.windows.net,1433;Initial Catalog=mapstudentmanager;User ID=bhyde@mapstudentmanager;Password=12345!#cjn" tags="">
+    <parameterEntry kind="XmlFile" scope="\\\\psf\\Home\\Desktop\\Winter\ 16\\CS\ 296N\\StudentAttendanceTracker\\StudentAttendanceTracker\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='StudentAttendanceTrackerContext']/@connectionString" />
+  </parameter>
+</parameters>
